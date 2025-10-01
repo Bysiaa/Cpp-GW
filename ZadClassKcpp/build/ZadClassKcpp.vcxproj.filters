@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\main.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadArytmetykaWskaznikowRoznica.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadArytmetykaWskaznikowZnajdowanie.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadEnumExample.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadKcpp.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadMainExample.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadMetodyAbstrakcyjne.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadPrzeciazaniePole.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadStringExample.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadStruct.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadUnia.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\src\ZadZwracanie.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Gabcia\Desktop\Cpp-GW\ZadClassKcpp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A552F068-57B8-3055-91C9-A07DA8E1988F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

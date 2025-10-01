@@ -1,11 +1,12 @@
 /*
 Zadanie 1.0
-Napisać krótki program oparty na pliku LTypeEnumerated.cc, zawierający przykład 
+Napisać krótki program oparty na pliku LTypeEnumerated.cc, zawierający przykład
 użycia typu enum (scoped lub unscoped, z miesiącami)
 - nazwać program: ZadEnumExample.cc
 */
 
 #include <iostream>
+
 using namespace std;
 
 enum miesiace {
@@ -26,46 +27,48 @@ enum miesiace {
 int main()
 {
     miesiace aktualnyMsc = marzec;
-    std::cout<<"Mamy teraz miesiac " << aktualnyMsc << " czyli... ";
-    
-    switch(aktualnyMsc) {
+    std::cout << "Mamy teraz miesiac " << aktualnyMsc << " czyli... ";
+
+    switch (aktualnyMsc) {
         case styczen:
             std::cout << "styczeń!!!" << endl;
-            break;
+        break;
         case luty:
             std::cout << "luty!!!" << endl;
-            break;
+        break;
         case marzec:
             std::cout << "marzec!!!" << endl;
-            break;
+        break;
         case kwiecien:
             std::cout << "kwiecien!!!" << endl;
-            break;
+        break;
         case maj:
             std::cout << "maj!!!" << endl;
-            break;
+        break;
         case czerwiec:
             std::cout << "czerwiec!!!" << endl;
-            break;
+        break;
         case lipiec:
             std::cout << "lipiec!!!" << endl;
-            break;
+        break;
         case sierpien:
             std::cout << "sierpien!!!" << endl;
-            break;
+        break;
         case wrzesien:
             std::cout << "wrzesien!!!" << endl;
-            break;
+        break;
         case pazdziernik:
             std::cout << "pazdziernik!!!" << endl;
-            break;
+        break;
         case listopad:
             std::cout << "listopad!!!" << endl;
-            break;
+        break;
         case grudzien:
             std::cout << "grudzien!!!" << endl;
-            break;
+        break;
     }
+    cout << "Nacisnij Enter, aby zakonczyc program...";
+    cin.get();
 
     return 0;
 }

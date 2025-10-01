@@ -7,26 +7,26 @@ Napisać program który zawiera:
 */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 void f1() {
-    cout << "To jest funkcja 1, ktora nic nie robi" << endl;
+    cout << "To jest funkcja 1, która nic nie robi";
     return;
 }
 
 int f2() {
-    cout << "To jest funkcja 2, ktora zwraca wynik 5+5" << endl;
-    cout << 5 + 5 << endl;
+    cout << "To jest funkcja 2, która zwraca wynik 5+5";
     return 5 + 5;
 }
 
 extern "C" void f3() {
-    cout << "To jest funkcja 3, ktora jest zadeklarowana jako 'extern 'C''" << endl;
+    cout << "To jest funkcja 3, która jest zadeklarowana jako 'extern 'C''";
     return;
 }
 
 void f4() {
-    cout << "To jest funkcja 4, ktora wypisuje wszystkie liczby od 1 do 5" << endl;
+    cout << "To jest funkcja 4, która wypisuje wszystkie liczby od 1 do 5";
     int a = 0;
     do {
         a += 1;
@@ -36,7 +36,7 @@ void f4() {
 }
 
 extern "C" bool f5() {
-    cout << "To jest funkcja 5, i kolejna, ktora jest zadeklarowana jako 'extern 'C''" << endl;
+    cout << "To jest funkcja 5, która jest zadeklarowana jako 'extern 'C'' i zwraca wartość True";
     return true;
 }
 
@@ -44,27 +44,29 @@ extern "C" bool f5() {
 int main(int arg, char* funkcje[])
 {
     for (int i = 1; i < arg; i++) {
-
-        string nazwa_funkcji = funkcje[i];
-
-        if (nazwa_funkcji == "f1") {
+        string argName = funkcje[i];
+        if (funkcje[i] == "f1") {
             f1();
         }
-        else if (nazwa_funkcji == "f2") {
+        else if (funkcje[i] == "f2") {
             f2();
         }
-        else if (nazwa_funkcji == "f3") {
+        else if (funkcje[i] == "f3") {
             f3();
         }
-        else if (nazwa_funkcji == "f4") {
+        else if (funkcje[i] == "f4") {
             f4();
         }
-        else if (nazwa_funkcji == "f5") {
+        else if (funkcje[i] == "f5") {
             f5();
         }
         else {
             cout << "Taka funkcja nie istnieje";
         }
     }
+
+    cout << "Nacisnij Enter, aby zakonczyc program...";
+    cin.get();
+
     return 0;
 }

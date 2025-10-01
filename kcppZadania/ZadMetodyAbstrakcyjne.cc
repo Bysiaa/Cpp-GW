@@ -1,3 +1,14 @@
+/*
+Zadanie 5.6
+--------------------------------------
+Bazując na pliku LClassMetodyAbstrakcyjne.cc stwórz program który oblicza:
+- obwód, pole powierzchni
+dla:
+- kwadrat, trójkąt, prostokąt, koło (jako klasy dziedziczące po klasie abstrakcyjnej Figura),
+oraz funkcja Dystans (dodatkowo w klasie Koło): Jeśli rząd podaje, że na każdego obywatela w sklepie (kościele etc) przypada X metrów kwadratowych (argument przekazywany do funkcji) to w jakiej odległości (promieniu - to ma funkcja Dystans zwracać) może znaleźć się następna osoba.
+Nazwij program: ZadMetodyAbstrakcyjne.cc
+*/
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -58,20 +69,21 @@ public:
 
 class Kolo : public Figura {
     double promien;
+    double M_PI = 3.14;
 public:
     Kolo(double r) : promien(r) {}
     double Pole() override {
-        return 3.14 * promien * promien;
+        return M_PI * promien * promien;
     }
     double Obwod() override {
-        return 2 * 3.14 * promien;
+        return 2 * M_PI * promien;
     }
     void Narysuj() override {
         cout << "Kolo o promieniu " << promien << endl;
     }
 
     double Dystans(double m2_na_osobe) {
-        return sqrt(m2_na_osobe / 3.14);
+        return sqrt(m2_na_osobe / M_PI);
     }
 };
 
@@ -98,5 +110,9 @@ int main() {
         delete figury[i];
     }
 
+    cout << "\n\nNacisnij Enter, aby zakonczyc program...";
+    cin.get();
+
     return 0;
 }
+

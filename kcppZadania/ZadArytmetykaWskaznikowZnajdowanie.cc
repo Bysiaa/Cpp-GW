@@ -1,32 +1,30 @@
+/*
+Zadanie 3.3
+-------------------------------------
+Napisz program znajdujący największy element w tablicy przy użyciu wskaźników
+Napisz funkcję maxElement, która przyjmuje wskaźnik na tablicę liczb oraz jej rozmiar i zwraca wskaźnik do największego elementu.
+Nazwa: ZadArytmetykaWskaznikowZnajdowanie.cc
+*/
+
 #include <iostream>
 using namespace std;
 
-int* maxElement(int* tab, int rozmiar) {
-    int* max = tab; 
-
-    for (int i = 1; i < rozmiar; i++) {
-        if (*(tab + i) > *max) {
-            max = tab + i;
-        }
+int* maxElement(int* tab, int r) {
+    if (r <= 0) return 0;
+    int* ret = tab;
+    for (int i = 1; i < r; i++) {
+        if (*ret < tab[i]) { ret = &tab[i]; }
     }
-
-    return max;
+    return ret;
 }
 
 int main() {
-    const int ROZMIAR = 6;
-    int tablica[ROZMIAR] = { 3, 8, 2, 15, 6, 10 };
+    int arr[] = { 3, 7, 2, 9, 5 };
+    int* maxPtr = maxElement(arr, 5);
+    cout << "Najwiekszy element: " << *maxPtr << endl;
 
-    cout << "Tablica: ";
-    for (int i = 0; i < ROZMIAR; i++) {
-        cout << tablica[i] << " ";
-    }
-    cout << endl;
-
-    int* maxPtr = maxElement(tablica, ROZMIAR);
-
-    cout << "Najwiekszy element to: " << *maxPtr << endl;
-    cout << "Indeks: " << (maxPtr - tablica) << endl;
+    cout << "Nacisnij Enter, aby zakonczyc program...";
+    cin.get();
 
     return 0;
 }

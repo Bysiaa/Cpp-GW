@@ -1,45 +1,60 @@
+/*
+Zadanie 2.1
+--------------------------------------
+Zadanie: Napisać program z czterema funkcjami z których każda zwraca inaczej:
+1. Przez wartość
+2. Przez referencje
+3. Przez wskaźnik
+4. Tablice (proszę się zastanowić o co tak naprawę chodzi)
+- nazwać program: ZadZwracanie.cc
+*/
+
 #include <iostream>
+#include <string>
 using namespace std;
 
-int zwrocPrzezWartosc() {
-    int a = 1;
-    return 1;
+int zwrocWartosc() {
+    int x = 42;
+    return x;
 }
 
-int& zwrocPrzezReferencje(int& ref) {
-    return ref;
+int& zwrocReferencja(int& y) {
+    return y;
 }
 
-int* zwrocPrzezWskaznik(int* wsk) {
-    return wsk;
+int* zwrocWskaznik(int* ptr) {
+    return ptr;
 }
 
 int* zwrocTablice() {
-    static int tablica[5] = { 1, 2, 3, 4, 5 };
-    return tablica;
+    static int arr[5] = { 1,2,3,4,5 };
+    return arr;
 }
 
-int main() {
-    int wartosc = zwrocPrzezWartosc();
-    cout << "Zwrocono przez wartosc: " << wartosc << endl;
 
-    int x = 7;
-    int& ref = zwrocPrzezReferencje(x);
-    ref = 14;
-    cout << "Zmieniona przez referencje: " << x << endl;
+int main(int arg, char* funkcje[])
+{
+    int wartosc = zwrocWartosc();
+    cout << "Zwracanie przez wartość: " << wartosc << endl;
 
-    int y = 21;
-    int* wsk = zwrocPrzezWskaznik(&y);
+    int b = 100;
+    int& ref = zwrocReferencja(b);
+    cout << "Zwracanie przez referencję: " << ref << endl;
+    ref = 300;
+    cout << "Po zmianie ref na 300, int b to: " << b << endl;
 
-    *wsk = 28;
-    cout << "Zmieniona przez wskaznik: " << y << endl;
+    int c = 300;
+    int* wsk = zwrocWskaznik(&c);
+    cout << "Zwracanie przez wskaźnik: " << *wsk << endl;
+    *wsk = 400;
+    cout << "Po zmianie *wsk na 400, int c to: " << c << endl;
 
-    int* tab = zwrocTablice();
-    cout << "Zwrocona tablica: ";
-    for (int i = 0; i < 5; i++) {
-        cout << tab[i] << " ";
-    }
-    cout << endl;
+    int* arr = zwrocTablice();
+    cout << "Tablica: ";
+    for (int i = 0; i < 5; i++) cout << arr[i] << " ";
+
+    cout << "Nacisnij Enter, aby zakonczyc program...";
+    cin.get();
 
     return 0;
 }

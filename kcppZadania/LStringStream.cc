@@ -1,3 +1,10 @@
+/*
+Zadanie 4.0
+--------------------------------------
+Napisz program z przykładem zastosowania klasy stringstream z biblioteki sstream
+- nazwać program LStringStream.cc
+*/
+
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -21,14 +28,15 @@ int main() {
     int a = 2025;
     stringstream konwerter;
     konwerter << "Rok: " << a;
-
-    string wynik = konwerter.str();
-    cout << "\nZawartosc konwertera: " << wynik << endl;
+    cout << "Zawartosc konwertera: " << konwerter.str() << endl;
 
     string dane = "999";
     int liczbaZStringa;
     stringstream(dane) >> liczbaZStringa;
-    cout << "\nZamieniony string na int: " << liczbaZStringa << endl;
+    cout << "Zamieniony string na int: " << liczbaZStringa << endl;
+
+    cout << "Nacisnij Enter, aby zakonczyc program...";
+    cin.get();
 
     return 0;
 }

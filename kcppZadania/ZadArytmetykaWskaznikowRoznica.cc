@@ -1,33 +1,32 @@
+/*
+Zadanie 3.5
+-------------------------------------
+Napisz program: Różnica między dwoma wskaźnikami
+Stwórz program, który definiuje tablicę 10 liczb całkowitych, a następnie oblicza różnicę między dwoma wskaźnikami wskazującymi na różne elementy tej tablicy.
+Nazwa: ZadArytmetykaWskaznikowRoznica.cc
+*/
+
 #include <iostream>
 using namespace std;
 
-void przesun(int* tab, int rozmiar) {
-    int ostatni = *(tab + rozmiar - 1);
-
-    for (int i = rozmiar - 1; i > 0; i--) {
-        *(tab + i) = *(tab + i - 1);
-    }
-
-    *tab = ostatni;
-}
-
 int main() {
-    const int ROZMIAR = 5;
-    int tablica[ROZMIAR] = { 1, 2, 3, 4, 5 };
+    int tab[10] = { 1, 6, 4, 10, 3, 17, 4, 72, 2, 11 };
 
-    cout << "Przed przesunieciem: ";
-    for (int i = 0; i < ROZMIAR; i++) {
-        cout << tablica[i] << " ";
-    }
+    int* w1 = &tab[2];
+    int* w2 = &tab[7];
+
+    ptrdiff_t roznica = w2 - w1;
+
+    cout << "Elementy tablicy: ";
+    for (int i = 0; i < 10; i++) cout << tab[i] << " ";
     cout << endl;
 
-    przesun(tablica, ROZMIAR);
+    cout << "Wskaznik 1 wskazuje na: " << *w1 << endl;
+    cout << "Wskaznik 2 wskazuje na: " << *w2 << endl;
+    cout << "Roznica miedzy wskaźnikami (liczba elementow): " << roznica << endl;
 
-    cout << "Po przesunieciu:    ";
-    for (int i = 0; i < ROZMIAR; i++) {
-        cout << tablica[i] << " ";
-    }
-    cout << endl;
+    cout << "Nacisnij Enter, aby zakonczyc program...";
+    cin.get();
 
     return 0;
 }

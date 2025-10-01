@@ -1,3 +1,14 @@
+/*
+Zadanie 2.2 (przeciążanie funkcji)
+--------------------------------------
+Napisz program który przeciążenia funkcję do obliczania pola: pole(...).
+Napisz funkcję pole, która będzie przeciążona dla:
+- kwadratu (przyjmuje długość boku),
+- prostokąta (przyjmuje długości dwóch boków),
+- koła (przyjmuje promień).
+nazwa: ZadPrzeciazaniePole.cc
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -21,6 +32,9 @@ int main() {
     cout << "Pole kwadratu o boku " << bok1 << ": " << pole(bok1) << endl;
     cout << "Pole prostokata o bokach " << bok1 << " i " << bok2 << ": " << pole(bok1, bok2) << endl;
     cout << "Pole kola o promieniu " << promien << ": " << pole(promien) << endl;
+
+    cout << "Nacisnij Enter, aby zakonczyc program...";
+    cin.get();
 
     return 0;
 }
